@@ -15,3 +15,12 @@
 ## jjj,18
 ##
 ##
+data = open('data.csv','r').readlines()
+data = [line[:-1] for line in data]
+data = [line.split('\t') for line in data]
+a=[row[4].split(',') for row in data]
+b=','.join([row[4] for row in data]).split(',')
+b=[row.replace('\n','').split(':') for row in b]
+df=([row[0] for row in b])
+for i in sorted(set(df)):
+  print(f'{i},{df.count(i)}')
