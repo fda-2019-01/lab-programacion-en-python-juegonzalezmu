@@ -16,8 +16,6 @@
 ##    ('9', ['A', 'B', 'E', 'C'])
 ##
 ##
-import itertools
-from operator import itemgetter
 data = open('data.csv','r').readlines()
 data = [line[:-1] for line in data]
 data = [line.split('\t') for line in data]
